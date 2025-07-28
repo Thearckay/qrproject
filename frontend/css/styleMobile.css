@@ -1,0 +1,84 @@
+/* Tablet */
+
+:root {
+    --positionMobileLeft: 10%;
+}
+@media screen and (max-width: 780px) {
+   
+    body {
+        display: block;
+    }
+
+    .secLeftSide {
+        height: auto;
+        display: flex;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .txtInput {
+        left: var(--positionMobileLeft);
+        margin: 5em 0 0 0;
+        bottom: 10%;
+    }
+
+    .labelQrContainer {
+        margin: 2em 0 0 0;
+        width: 50%;
+        left: var(--positionMobileLeft);
+    }
+
+    .typeQrContainer {
+        margin: .2em 0 0 0;
+        left: var(--positionMobileLeft);
+        font-size: 1em;
+        justify-content: space-around;
+    }
+    .typeQrIcons{
+        font-size: 1.9em;
+    }
+    
+    .settingsIcon{
+        left: calc(var(--positionMobileLeft) + 78.4%);
+        margin: .5em 0 0 0;
+        z-index: 1;
+    }
+
+    .settingsContainer{
+        max-width: 572px;
+        left: var(--positionMobileLeft);
+        bottom: 15px;
+    }
+    
+
+    .buttonGenerate {
+        left: 40%;
+        margin-top: 1em;
+        font-size: 1em;
+        border-radius: 8px;
+        padding: .5em 1em;
+    }
+
+    /* right side mobile */
+
+    .secrightSide{
+        width: 100%;
+        height: auto;
+    }
+
+    .qrContainer{
+        width: 80%;
+        height: auto;
+        margin: 1em auto;
+    }
+
+    .qrImg {
+        width: 50%;
+    }
+
+    .downloadButton{
+        margin: 1em 0 0 0;
+        padding: .5em 2em;
+
+    }
+}

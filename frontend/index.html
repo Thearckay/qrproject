@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Qr code</title>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleMobile.css">
+</head>
+<body>
+    <section class="secLeftSide">
+        <input type="text" class="txtInput" placeholder="Escreva aqui" id="textInput">
+        <p class="labelQrContainer">Tipo de Qr</p>
+        <div class="typeQrContainer">
+            <button class="typeQrIcons" id="whatasppButton"><i class="bi bi-whatsapp "></i></button>
+            <button class="typeQrIcons"  id="siteButton"><i class="bi bi-globe2 "></i></button>
+            <button class="typeQrIcons"  id="instagramButton"> <i class="bi bi-instagram "></i></button>
+            <button class="typeQrIcons" id="localButton"><i class="bi bi-geo-alt " ></i></button>
+        </div>
+
+        <button class="settingsIcon">
+            <i class="bi bi-gear " id="settingsButton"></i>
+        </button>
+
+        <div class="settingsContainer hidden-settings" id="settingsContainer">
+            <div class="settingsOptions">
+                <div>
+                    <label for="colorInput"><i class="bi bi-eyedropper"></i> Cor:</label>
+                    <input type="color" name="colorInput" id="colorQrInput">
+                </div>
+                <div>
+                    <label for="colorInsideInput"><i class="bi bi-eyedropper"></i> Cor de fundo:</label>
+                    <input type="color" name="colorInsideInput" id="colorBackgroundQrInput" value="#FFFFFF">
+                </div>
+                <div class="settingsButtonsContainer">
+                    <button class="settingsButtons" id="removeColorValues">Remover <i class="bi bi-trash3"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="buttonGenerate buttonHover" id="generateButton">Gerar</button>
+    </section>
+    <section class="secrightSide">
+
+        <div class="qrContainer">
+            <img src="imgs/noQrcode.png" alt="" class="qrImg" id="qrImg">
+            <h3 class="qrTittle">Meu Qr code</h3>
+            <button type="submit" class="downloadButton buttonHover" id="donwloadButton">Baixar</button>
+        </div>
+
+    </section>
+    <script src="js/utils/validation.js" type="module"></script>
+    <script type="module" src="js/ui/effects.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

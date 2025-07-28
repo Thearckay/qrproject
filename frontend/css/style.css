@@ -1,0 +1,238 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: #2A2929;
+    --mainVarientColor: #363636;
+
+    --secondColor: #46E559;
+    --secondColorVarient: #35ac43;
+
+    --iconsDefaultColor: #B8B1B1;
+    --fontColorDefault: white;
+    --fontColorDefaultSelected: #d4d3d3;
+
+    --positionMainLeft: 15%;
+    --positionMainBottom: 18%
+}
+
+body{
+    background-color: var(--mainColor);
+    display: flex;
+}
+
+/* Left side */
+.secLeftSide{
+    min-width: 60%;
+    height: 100dvh;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    justify-content: center;
+    /* transition: all 1s; */
+}
+
+.txtInput{
+    width: 80%;
+    font-size: 1.1em;
+    margin: 0 0 2em 0;
+    background: transparent;
+    border: none;
+    border-bottom: .1px white solid;
+    position: relative;
+    left: var(--positionMainLeft);
+    bottom: var(--positionMainBottom);
+    color: var(--fontColorDefault);
+}
+.txtInput:focus{
+    outline: none;
+}
+
+.labelQrContainer{
+    color: var(--fontColorDefault);
+    position: relative;
+    left: var(--positionMainLeft);
+    bottom: var(--positionMainBottom);
+    margin: 0 0 .2em 0;
+    font-family: poppins;
+    font-weight: lighter;
+}
+
+.typeQrContainer{
+    width: 80%;
+    background-color: var(--mainVarientColor);
+    border-radius: 10px;
+    padding: .5em;
+    display: flex;
+    color: var(--iconsDefaultColor);
+    justify-content: flex-start;
+    font-size: 1.5em;
+    position: relative;
+    left: var(--positionMainLeft);
+    bottom: var(--positionMainBottom);
+    flex-wrap: wrap;
+}
+
+.typeQrIcons {
+    color: var(--fontColorDefault);
+    margin: 0 0 0 1.2em;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+}
+
+.typeQrIcons:hover{
+    /* color: var(--secondColor); */
+    cursor: pointer;
+    /* text-shadow: var(--secondColor) 1px 1px 10px; */
+}
+
+.settingsIcon {
+    position: relative;
+    font-size: 1.2em;
+    max-width: 16px;
+    background-color: transparent;
+    border: none;
+    left: 92.7%;
+    bottom: calc(var(--positionMainBottom) - 14px);
+    color: var(--fontColorDefault);
+    z-index: 1;
+}
+.settingsIcon:hover {
+    cursor: pointer;
+}
+
+.settingsContainer{
+    display: flex;
+    background-color: var(--mainVarientColor);
+    width: 80%;
+    max-width: 676px;
+    position: relative;
+    left: var(--positionMainLeft);
+    bottom: var(--positionMainBottom);
+    border-radius: 10px;
+    gap: .5em;
+    flex-direction: column;
+    color: var(--fontColorDefault);
+    font-family: poppins ;
+    font-weight: lighter;
+    max-height: 145.2px;
+    overflow: hidden;
+    transition: max-height .9s ease-out;
+}
+
+.settingsOptions{
+    padding: 1em;
+}
+
+.hidden-settings {
+    max-height: 0;
+    padding: 0;
+    max-width: 676px;
+    border-top: 1px solid var(--mainVarientColor);
+    overflow: hidden;
+}
+
+.settingsButtonsContainer{
+    margin: 1em 0 0 0;
+    display: flex;
+    gap: .5em;
+}
+
+.settingsButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: .3em;
+    /* border-radius: 5px; */
+    background-color: transparent;
+    border: none;
+    /* border-bottom: 1px solid ; */
+    color: var(--fontColorDefault);
+}
+
+.settingsButtons:hover{
+    cursor: pointer;
+}
+
+.buttonGenerate{
+    max-width: 20%;
+    min-height: 7%;
+    font-size: 1.2em;
+    font-family: poppins;
+    font-weight: bold;
+    border-radius: 15px;
+    color: var(--fontColorDefault);
+    background-color: var(--secondColor);
+    border: none;
+    box-shadow: var(--secondColor) 1px 1px 10px ;
+    position: relative;
+    left: 75%;
+    bottom: calc(var(--positionMainBottom) - 4%);
+}
+
+.buttonHover:hover{
+    color: var(--fontColorDefaultSelected);
+    background-color: var(--secondColorVarient);
+    cursor: pointer;
+}
+
+/* Right side */
+
+.secrightSide{
+    width: 40%;
+    height: 100dvh;
+}
+
+.qrContainer{
+    width: 75%;
+    height: 80%;
+    margin: auto;
+    margin-top: 4em;
+    background-color: var(--mainVarientColor);
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+}
+
+.qrImg {
+    width: 80%;
+    border-radius: 2em;
+    margin: auto;
+    position: relative;
+    bottom: 10%;
+}
+
+.qrTittle {
+    color: var(--fontColorDefaultSelected);
+    font-family: poppins;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    position: relative;
+    bottom: 21%;
+}
+
+.downloadButton {
+    min-width: 60%;
+    position: relative;
+    bottom: 18%;
+    min-height: 10%;
+    font-size: 1.5em;
+    font-family: poppins;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: var(--secondColor);
+    color: var(--fontColorDefault);
+    border: none;
+    box-shadow: var(--secondColor) 1px 1px 10px;
+}
