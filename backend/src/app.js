@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const qrCoderoutes = require('./routes/qrCodeRoutes')
+const cors = require('cors')
 const { env } = require("process")
 
 const port = 8080
@@ -11,6 +12,7 @@ const port = 8080
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, '..','..','frontend')))
+app.use(cors({origin: `http://localhost:${port}`}))
 
 
 app.get('/', (req, res) =>{
