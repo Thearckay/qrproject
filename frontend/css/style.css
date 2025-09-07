@@ -9,6 +9,7 @@
 :root {
     --mainColor: #2A2929;
     --mainVarientColor: #363636;
+    --alertColor: #b72b2b;
 
     --secondColor: #46E559;
     --secondColorVarient: #35ac43;
@@ -235,4 +236,22 @@ body{
     color: var(--fontColorDefault);
     border: none;
     box-shadow: var(--secondColor) 1px 1px 10px;
+}
+
+/* Alert */
+
+.alertContainer{
+    position: absolute;
+    top: 90%;
+    left: 2em;
+    background-color: var(--alertColor);
+    padding: 1em;
+    border-radius: 10px;
+    min-width: 15%;
+    color: var(--fontColorDefault);
+    transition: left .5s;
+}
+
+.hideAlert{
+    left: -30%;
 }

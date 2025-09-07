@@ -15,6 +15,7 @@ const instagramButton = document.getElementById('instagramButton')
 const localButton = document.getElementById('localButton') 
 
 const settingsButton = document.getElementById('settingsButton')
+const alertContainer = document.getElementById('alertContainer')
 
 //
     //Configurações
@@ -95,6 +96,17 @@ function selectedType(type){
     }
 }
 
+function alertErro(){
+    alertContainer.classList.toggle('hideAlert')
+    const errorText = document.getElementById('errorText')
+    errorText.textContent = `Insira ${typeQrStatus}!`
+
+    let interval = setInterval(() => {
+        alertContainer.classList.toggle('hideAlert')
+        clearInterval(interval)
+    }, 4000);
+}
+
 async function sendData(obj){
     const type = obj.type
     const txtInputValidated = obj.input
@@ -135,7 +147,7 @@ async function sendData(obj){
         urlInput.value = ''
 
     } else {
-        alert(`Insira ${typeQrStatus}`)
+        alertErro()
     }
 
 }

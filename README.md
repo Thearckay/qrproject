@@ -60,7 +60,7 @@
     <li style="margin-bottom: 5px;"><code style="padding: 2px 4px; border-radius: 3px; font-family: monospace;">qrcode</code><b> library:</b> Library to generate QR Codes.</li>
     <li style="margin-bottom: 5px;"><b>MySQL (or other DB):</b> Database for QR Code registration (if implemented).
         <ul style="list-style: disc; padding-left: 25px; margin-top: 5px;">
-            <li style="margin-bottom: 5px;"><code style="padding: 2px 4px; border-radius: 3px; font-family: monospace;">mysql</code> (or <code style="padding: 2px 4px; border-radius: 3px; font-family: monospace;">mysql2</code>) for database connection.</li>
+            <li style="margin-bottom: 5px;">  <code style="padding: 2px 4px; border-radius: 3px; font-family: monospace;">mysql2</code> for database connection.</li>
         </ul>
     </li>
 </ul>
